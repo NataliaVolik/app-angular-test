@@ -20,6 +20,7 @@ import {MatGridListModule} from "@angular/material/grid-list";
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatNativeDateModule} from "@angular/material/core";
 import {MatInputModule} from "@angular/material/input";
+import { ButtonComponent } from './dashboard/form-field/button/button.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import {MatInputModule} from "@angular/material/input";
     CardComponent,
     FormFieldComponent,
     GridListComponent,
-    AccordionComponent
+    AccordionComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,

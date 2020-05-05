@@ -1,16 +1,17 @@
 
-    <mat-form-field>
+    <mat-form-field class="mg">
         <mat-label>Choose a date</mat-label>
         <input matInput [matDatepicker]="picker">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
 
-    <form class="example-form">
+    <form class="example-form" class="mg">
         <mat-form-field class="example-full-width">
             <mat-label>Favorite food</mat-label>
             <input matInput placeholder="Ex. Pizza" value="Sushi">
         </mat-form-field>
     </form>
 
+   <app-button (childToParent)="toggle($event)"></app-button>
 

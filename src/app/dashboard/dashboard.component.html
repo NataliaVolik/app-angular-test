@@ -1,14 +1,14 @@
 <mat-tab-group>
 
 
-    <mat-tab label="First">
-        <app-card></app-card>
+    <mat-tab label="First" >
+        <app-card (change)="onChange($event)" [config]="config"></app-card>
     </mat-tab>
 
 
 
     <mat-tab label="Second">
-        <app-form-field></app-form-field>
+        <app-form-field (valueEvent)="getEvent($event)"></app-form-field>
     </mat-tab>
 
 
@@ -20,7 +20,7 @@
 
 
     <mat-tab label="Fourth">
-       <!--<app-accordion></app-accordion>-->
+       <app-accordion></app-accordion>
     </mat-tab>
 
 

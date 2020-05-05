@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Output, EventEmitter, Input} from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,10 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-
+  @Input() config: any;
+  @Output() changeColor = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onChange(color){
+     this.changeColor.emit(color);
+     console.log('dashboard event');
+  }
+
+  getEvent(data){
+    console.log(data);
+  }
 }

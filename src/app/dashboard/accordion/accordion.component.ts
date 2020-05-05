@@ -13,5 +13,7 @@ export class AccordionComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+    changeState(value){
+        this.panelOpenState = value;
+    }
 }
