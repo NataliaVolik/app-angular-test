@@ -12,6 +12,7 @@ export class CardComponent implements OnInit {
   isPressed = false;
   isPress = false;
 
+
   constructor() { }
 
   ngOnInit(): void {
@@ -19,12 +20,16 @@ export class CardComponent implements OnInit {
 
   onChanged(){
     this.isPressed = !this.isPressed;
-    this.change.emit();
+    const valObj = {
+      isPressed:this.isPressed,
+      color: '#f0f0f0'
+    };
+    this.change.emit(valObj);
   }
 
   changeColor(){
     this.isPress = !this.isPress;
-    this.changeText.emit();
+    this.changeText.emit(this.isPress);
   }
 
 

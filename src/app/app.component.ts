@@ -9,6 +9,7 @@ export class AppComponent implements OnInit{
   title = 'app-angular-test';
   isPressed = false;
   isPress = false;
+  color : string;
 
   configApp = {
       dashboard : {
@@ -26,13 +27,15 @@ export class AppComponent implements OnInit{
     console.log(this.configApp);
   }
 
-  changeEvent(){
-    this.isPressed = !this.isPressed;
+  changeEvent(newVal){
+    this.isPressed = newVal.isPressed;
+    this.color = newVal.color;
+    debugger;
     console.log('я в app');
   }
 
-  chColorEvent(){
-    this.isPress = !this.isPress;
+  chColorEvent(nVal){
+    this.isPress = nVal;
   }
 }
 

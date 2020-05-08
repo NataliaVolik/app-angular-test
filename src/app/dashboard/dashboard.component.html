@@ -2,7 +2,7 @@
 
 
     <mat-tab label="First" >
-        <app-card (change)="onChange()" (changeText)="changeTxt()" [config]="config"></app-card>
+        <app-card (change)="onChange($event)" (changeText)="changeTxt($event)" [config]="config"></app-card>
     </mat-tab>
 
 

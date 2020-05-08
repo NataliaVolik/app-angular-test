@@ -9,21 +9,21 @@ export class DashboardComponent implements OnInit {
   @Input() config: any;
   @Output() changeColor = new EventEmitter();
   @Output() chColor = new EventEmitter();
-  isPressed = false;
-  isPress = false;
+  // isPressed = false;
+  // isPress = false;
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onChange(){
-     this.changeColor.emit();
-    this.isPressed = !this.isPressed;
+  onChange(newValue){
+     this.changeColor.emit(newValue);
+    // this.isPressed = !this.isPressed;
      console.log('dashboard event');
   }
-  changeTxt(){
-    this.chColor.emit();
-    this.isPress = !this.isPress;
+  changeTxt(newVal){
+    this.chColor.emit(newVal);
+    // this.isPress = !this.isPress;
   }
 
 }
