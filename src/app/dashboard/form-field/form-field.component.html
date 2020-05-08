@@ -13,5 +13,9 @@
         </mat-form-field>
     </form>
 
-   <app-button (childToParent)="toggle($event)"></app-button>
+    <div [innerHtml]="parentText">
+
+    </div>
+
+   <app-button (childEmitter)="setChildText($event)"></app-button>
 

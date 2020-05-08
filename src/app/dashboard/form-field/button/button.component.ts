@@ -6,14 +6,14 @@ import {Component, OnInit, Output, EventEmitter} from '@angular/core';
   styleUrls: ['button.component.scss']
 })
 export class ButtonComponent implements OnInit {
-  @Output() childToParent = new EventEmitter <any>();
+  @Output() childEmitter = new EventEmitter <any>();
 
 
   constructor() { }
 
   ngOnInit(): void {
   }
-  sendToParent(message){
-    this.childToParent.emit(message);
+  childClick(){
+    this.childEmitter.emit('Welcome Date picker!');
   }
 }

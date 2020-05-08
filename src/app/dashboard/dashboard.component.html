@@ -2,13 +2,13 @@
 
 
     <mat-tab label="First" >
-        <app-card (change)="onChange($event)" [config]="config"></app-card>
+        <app-card (change)="onChange()" (changeText)="changeTxt()" [config]="config"></app-card>
     </mat-tab>
 
 
 
     <mat-tab label="Second">
-        <app-form-field (valueEvent)="getEvent($event)"></app-form-field>
+        <app-form-field></app-form-field>
     </mat-tab>
 
 

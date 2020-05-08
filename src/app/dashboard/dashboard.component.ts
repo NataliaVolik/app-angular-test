@@ -8,17 +8,22 @@ import {Component, OnInit, Output, EventEmitter, Input} from '@angular/core';
 export class DashboardComponent implements OnInit {
   @Input() config: any;
   @Output() changeColor = new EventEmitter();
+  @Output() chColor = new EventEmitter();
+  isPressed = false;
+  isPress = false;
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onChange(color){
-     this.changeColor.emit(color);
+  onChange(){
+     this.changeColor.emit();
+    this.isPressed = !this.isPressed;
      console.log('dashboard event');
   }
-
-  getEvent(data){
-    console.log(data);
+  changeTxt(){
+    this.chColor.emit();
+    this.isPress = !this.isPress;
   }
+
 }

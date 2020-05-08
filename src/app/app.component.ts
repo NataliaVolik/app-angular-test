@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit{
   title = 'app-angular-test';
+  isPressed = false;
+  isPress = false;
 
   configApp = {
       dashboard : {
@@ -24,9 +26,13 @@ export class AppComponent implements OnInit{
     console.log(this.configApp);
   }
 
-  changeEvent(color){
-    console.log('я в app', color);
+  changeEvent(){
+    this.isPressed = !this.isPressed;
+    console.log('я в app');
   }
 
+  chColorEvent(){
+    this.isPress = !this.isPress;
+  }
 }
 

@@ -7,15 +7,18 @@ import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 
 })
 export class FormFieldComponent implements OnInit {
-@Output() valueEvent = new EventEmitter();
+// @Output() valueEvent = new EventEmitter();
+  parentText : string;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  toggle(data){
-    this.valueEvent.emit(data);
-    console.log(data)
+  setChildText(childText){
+    // this.valueEvent.emit(data);
+    this.parentText = childText;
+    console.log('form field');
   }
 
 }
