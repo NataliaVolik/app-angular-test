@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['grid-list.component.scss']
 })
 export class GridListComponent implements OnInit {
+  isClik = false;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+  clEvent(){
+    this.isClik = !this.isClik;
   }
 
 }
