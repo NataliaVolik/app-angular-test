@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import {AppCounterService} from "./services/app-counter.service";
+import {LocalCounterService} from "./services/local-counter.service";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  providers: [LocalCounterService]
 })
 export class AppComponent implements OnInit{
 
@@ -40,14 +42,10 @@ export class AppComponent implements OnInit{
     this.isPress = nVal;
   }
 
-  constructor(private appCounterService: AppCounterService){
-
-  }
-
-
-
-
-
+  constructor(
+      private appCounterService: AppCounterService,
+      private localCounterService: LocalCounterService
+  ) {}
 
 
 }
