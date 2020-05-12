@@ -21,6 +21,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatNativeDateModule} from "@angular/material/core";
 import {MatInputModule} from "@angular/material/input";
 import { ButtonComponent } from './dashboard/form-field/button/button.component';
+import { CounterComponent } from './counter/counter.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { ButtonComponent } from './dashboard/form-field/button/button.component'
     FormFieldComponent,
     GridListComponent,
     AccordionComponent,
-    ButtonComponent
+    ButtonComponent,
+    CounterComponent
   ],
   imports: [
     BrowserModule,
