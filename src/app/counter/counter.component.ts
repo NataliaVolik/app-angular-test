@@ -7,11 +7,19 @@ import {AppCounterService} from "../services/app-counter.service";
   styleUrls: ['./counter.component.scss']
 })
 export class CounterComponent {
-
+  counter = 0;
   constructor(
-      private appCounterService: AppCounterService
+      public appCounterService: AppCounterService
   ) { }
 
+  increase(){
+    this.counter ++;
+    this.appCounterService.numberEvent.next(this.counter);
 
+  }
+  decrease(){
+    this.counter --;
+    this.appCounterService.numberEvent.next(this.counter);
+  }
 
 }

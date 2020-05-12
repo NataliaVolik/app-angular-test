@@ -1,4 +1,5 @@
 import {Component, OnInit, Output, EventEmitter, Input} from '@angular/core';
+import {AppCounterService} from "../services/app-counter.service";
 
 @Component({
   selector: 'app-dashboard',
@@ -9,9 +10,17 @@ export class DashboardComponent implements OnInit {
   @Input() config: any;
   @Output() changeColor = new EventEmitter();
   @Output() chColor = new EventEmitter();
+  color: string;
   // isPressed = false;
   // isPress = false;
-  constructor() { }
+  constructor(
+      private appCounterService : AppCounterService
+  ) {
+    this.appCounterService.colorGet.subscribe((value:string)=> {
+      this.color = value;
+      console.log(this.color);
+    })
+  }
 
   ngOnInit(): void {
   }

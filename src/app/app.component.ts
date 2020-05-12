@@ -43,8 +43,8 @@ export class AppComponent implements OnInit{
   }
 
   constructor(
-      private appCounterService: AppCounterService,
-      private localCounterService: LocalCounterService
+      public appCounterService: AppCounterService,
+      public localCounterService: LocalCounterService
   ) {}
 
 
