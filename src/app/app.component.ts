@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AppCounterService} from "./services/app-counter.service";
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
+
   title = 'app-angular-test';
   isPressed = false;
   isPress = false;
@@ -37,5 +39,16 @@ export class AppComponent implements OnInit{
   chColorEvent(nVal){
     this.isPress = nVal;
   }
+
+  constructor(private appCounterService: AppCounterService){
+
+  }
+
+
+
+
+
+
+
 }
 

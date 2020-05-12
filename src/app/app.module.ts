@@ -49,7 +49,9 @@ import { ButtonComponent } from './dashboard/form-field/button/button.component'
       MatFormFieldModule,
       MatInputModule
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
